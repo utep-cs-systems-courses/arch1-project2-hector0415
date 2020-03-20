@@ -6,7 +6,7 @@
 #include "stateMachines.h"
 #include "switches.h"
 
-#include "libTimer.h"
 #include <msp430.h>
+#include "libTimer.h"
 
 #endif // included
