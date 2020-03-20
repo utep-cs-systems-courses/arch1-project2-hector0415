@@ -9,7 +9,7 @@ switch_update_interrupt_sense()
   char p2val = P2IN;
   /* update switch interrupt to detect changes from current buttons */
   P2IES |= (p2val & SWITCHES);
-  P2IES &= (p2val | ~SWITHCES);
+  P2IES &= (p2val | ~SWITCHES);
   return p2val;
 }
 

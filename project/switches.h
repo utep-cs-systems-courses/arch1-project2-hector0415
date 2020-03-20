@@ -1,4 +1,4 @@
-#indef switches_included
+#ifndef switches_included
 #define switches_included
 
 #define SW1 BIT0
