@@ -8,7 +8,7 @@
 #define LEDS (BIT0 | BIT6)
 
 /* used to tell if leds are on or off */
-extern unsigned char green_state, red_state;
+extern unsigned char green_on, red_on;
 
 void led_init();    /* initialize LEDs */
 void led_update();  /* update leds     */
