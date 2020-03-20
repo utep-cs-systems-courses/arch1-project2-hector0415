@@ -1,4 +1,5 @@
 #include "util.h"
+#include "libTimer.h"
 
 void buzzer_init()
 {

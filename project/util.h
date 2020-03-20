@@ -7,6 +7,5 @@
 #include "switches.h"
 
 #include <msp430.h>
-#include "libTimer.h"
 
 #endif // included
