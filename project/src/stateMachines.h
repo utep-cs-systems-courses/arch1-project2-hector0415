@@ -13,4 +13,8 @@ void state_three();
 
 void state_four();
 
+void sm_fast_clock();
+void sm_slow_clock();
+void sm_update_led();
+
 #endif

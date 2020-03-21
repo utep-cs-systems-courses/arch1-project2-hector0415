@@ -9,6 +9,7 @@
 
 /* used to tell if leds are on or off */
 extern unsigned char green_on, red_on;
+extern unsigned char led_changed;
 
 void led_init();    /* initialize LEDs */
 void led_update();  /* update leds     */
