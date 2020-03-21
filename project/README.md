@@ -16,7 +16,7 @@ The first thing that must be done is to run the make file for the time
 > make load
 ## Cleaning up the src sub directory
 To remove .o and the .elf files from the sub directory, run the following command.
-> make load
+> make clean
 ## What the program does
 When the program is initially loaded into the msp430, the LED's are turned off
 #and the buzzer is not buzzing.
