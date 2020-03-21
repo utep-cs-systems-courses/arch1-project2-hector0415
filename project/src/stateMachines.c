@@ -7,6 +7,7 @@ void state_advance()
   switch(state)
     {
     case 1:
+      buzzer_set_period(2000);
       state_one();
       led_update();
       break;
@@ -22,26 +23,27 @@ void state_advance()
       break;
 
     case 4:
+      buzzer_set_period(1000);
       state_four();
       led_update();
       break;
     }
 }
-
+/*
 void state_one()
 {
   buzzer_set_period(1000);
   green_on = 0;
   red_on = 0;
 }
-
+*/
 void state_two()
 {
   static int state_counter_two = 0;
   switch(state_counter_two)
     {
     case 0:
-      buzzer_set_period(4000);
+      buzzer_set_period(2500);
       red_on = 0;
       green_on = 0;
       state_counter_two = 1;
@@ -63,7 +65,7 @@ void state_two()
       break;
 
     case 3:
-      buzzer_set_period(4000);
+      buzzer_set_period(3000);
       red_on = 0;
       green_on = 1;
       state_counter_two = 0;
@@ -75,14 +77,14 @@ void state_three()
 {
   //state three is performed in the wdInterrupter.
 }
-
+/*
 void state_four()
 {
   buzzer_set_period(4000);
   green_on = 1;
   red_on = 1;
 }
-
+*/
 static enum {off=0,dim=1,bright=2} ledMode;
 static char pwmCount = 0;
 
