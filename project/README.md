@@ -4,12 +4,11 @@
 1. src
 2. timelib
 ## How to install the program
-The first thing that must be done is to run the make file for the time library.
-1. Run the following command in the timerLib sub directory.
+1. Run the following command in the project sub directory.
 > make install
-2. Go back up a directory, then go into the src sub directory and run the following command.
-> make
-3. stay in the src sub directory and with the msp430 connected to the computer, run the following command.
+2. After running that command, the libraries for the timer are created as well 
+as the .elf file in the src subdirectory. To load the program onto the msp430, 
+run the following command
 > make load
 ## Cleaning up the src sub directory
 To remove .o and the .elf files from the sub directory, run the following command.
