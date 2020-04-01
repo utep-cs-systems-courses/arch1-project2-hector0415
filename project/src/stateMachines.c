@@ -1,6 +1,7 @@
 #include "util.h"
 
 char state = 0;
+int state_counter_two = 0;
 
 void state_advance()
 {
@@ -37,9 +38,10 @@ void state_one()
   red_on = 0;
 }
 */
+
+ /*
 void state_two()
 {
-  static int state_counter_two = 0;
   switch(state_counter_two)
     {
     case 0:
@@ -70,7 +72,42 @@ void state_two()
       green_on = 1;
       state_counter_two = 0;
       break;
+      
+    default:
     }
+}
+*/
+
+void state_two_zero()
+{
+  buzzer_set_period(2500);
+  red_on = 0;
+  green_on = 0;
+  state_counter_two = 1;
+}
+
+void state_two_one()
+{
+  buzzer_set_period(3000);
+  red_on = 1;
+  green_on = 0;
+  state_counter_two = 2;
+}
+
+void state_two_two()
+{
+  buzzer_set_period(2000);
+  red_on = 0;
+  green_on = 0;
+  state_counter_two = 3;
+}
+
+void state_two_three()
+{
+  buzzer_set_period(3000);
+  red_on = 0;
+  green_on = 1;
+  state_counter_two = 0;
 }
 
 void state_three()

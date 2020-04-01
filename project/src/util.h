@@ -5,6 +5,7 @@
 #include "led.h"
 #include "stateMachines.h"
 #include "switches.h"
+#include "assembly.h"
 
 #include <msp430.h>
 
