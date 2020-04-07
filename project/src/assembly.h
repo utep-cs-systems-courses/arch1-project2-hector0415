@@ -5,6 +5,4 @@ void state_one(void);
 
 void state_two(void);
 
-void state_four(void);
-
 #endif

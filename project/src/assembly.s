@@ -42,9 +42,3 @@ case_three:
 
 exit:	
 	ret
-	
-	.global state_four
-state_four:
-	mov.b #1, &red_on
-	mov.b #1, &green_on
-	ret

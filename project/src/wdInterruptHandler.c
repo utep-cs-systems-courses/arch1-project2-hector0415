@@ -15,15 +15,14 @@ __interrupt_vec(WDT_VECTOR) WDT()
     }
   else
     {
-      buzzer_set_period(3000);
       if(++blink_count == 125)
 	{
 	  sm_slow_clock();
+	  state_advance();
 	  blink_count = 0;
 	}
       sm_fast_clock();
       sm_update_led();
-
       led_update();
     }
 }

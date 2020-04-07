@@ -1,5 +1,18 @@
 #include "util.h"
 
+#define c1 76
+#define d1 68
+#define e1 61  
+#define f1 57
+#define g 51
+#define a 45
+#define b 40
+#define c2 38
+#define d2 34
+#define e2 30
+#define f2 29
+#define r 0
+
 char state = 0;
 int state_counter_two = 0;
 
@@ -8,7 +21,7 @@ void state_advance()
   switch(state)
     {
     case 1:
-      buzzer_set_period(2000);
+      buzzer_set_period(0);
       state_one();
       led_update();
       break;
@@ -109,19 +122,26 @@ void state_two_three()
   green_on = 1;
   state_counter_two = 0;
 }
-
+static int stc = 0;
 void state_three()
 {
-  //state three is performed in the wdInterrupter.
+  //dimming is done in wdInterruptHandler
+  char notes [48] = {f1,f1,a,c2,a,f1,e1,r,d2,c2,r,r,e1,e1,g,b,g,e1,f1,r,d2,e2,r,r,f1,f1,a,c2,a,f1,e1,r,d2,c2,r,r,e1,e1,g,b,g,e1,f1,r,e2,f1,r,r};
+  buzzer_set_period(notes[stc]*200);
+  stc = (stc+1)%48;
+  
 }
-/*
+static int sfc = 0;
 void state_four()
 {
-  buzzer_set_period(4000);
-  green_on = 1;
   red_on = 1;
+  green_on = 1;
+  
+  char notes [64] ={g,b,c2,d2,d2,d2,d2,d2,g,b,c2,d2,d2,d2,d2,d2,g,b,c2,d2,d2,b,b,g,g,b,b,a,a,a,a,a,b,b,a,g,g,g,g,b,b,d2,d2,d2,c2,c2,c2,c2,c2,b,c2,d2,d2,b,b,g,g,a,a,g,g,g,g,g};
+  buzzer_set_period(notes[sfc]*200);
+  sfc = (sfc+1)%64;
 }
-*/
+
 static enum {off=0,dim=1,bright=2} ledMode;
 static char pwmCount = 0;
 
