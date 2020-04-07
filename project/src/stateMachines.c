@@ -93,7 +93,7 @@ void state_two()
 
 void state_two_zero()
 {
-  buzzer_set_period(2500);
+  buzzer_set_period(a*200);
   red_on = 0;
   green_on = 0;
   state_counter_two = 1;
@@ -101,7 +101,7 @@ void state_two_zero()
 
 void state_two_one()
 {
-  buzzer_set_period(3000);
+  buzzer_set_period(d2*200);
   red_on = 1;
   green_on = 0;
   state_counter_two = 2;
@@ -109,7 +109,7 @@ void state_two_one()
 
 void state_two_two()
 {
-  buzzer_set_period(2000);
+  buzzer_set_period(a*200);
   red_on = 0;
   green_on = 0;
   state_counter_two = 3;
@@ -117,7 +117,7 @@ void state_two_two()
 
 void state_two_three()
 {
-  buzzer_set_period(3000);
+  buzzer_set_period(g*200);
   red_on = 0;
   green_on = 1;
   state_counter_two = 0;
