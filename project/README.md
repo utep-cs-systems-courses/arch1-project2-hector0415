@@ -21,6 +21,6 @@ Pressing SW1 will case the **RED** LED to light up and a tone to play continuous
 ### Pressing SW2
 Pressing SW2 will cause a tune to play continuously wich changes the tone of the buzzer and flashes the LED's/
 ### Pressing SW3
-Pressing SW3 will cause both lights to shine dim and a continuous tone to play.
+Pressing SW3 will cause both lights to shine dimmly and the song The Mexican Hat Dance song will play.
 ### Pressing SW4
-Pressing SW4 will cause both lights to shine bright and a continuous tone to play which is higher pitched compared to the tone played by SW3.
+Pressing SW4 will cause only the green light to turn on and the song The Saints Go Marching In will start playing.
